@@ -23,10 +23,10 @@ logging.level.org.springframework.security: DEBUG
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://localhost:3306/user?useSSL=false
-    username: root
-    password: root
-    driver-class-name:  com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user
+    username:root
+    password:root
     initialize: true
 security.ignored: /resources/**
 ---
