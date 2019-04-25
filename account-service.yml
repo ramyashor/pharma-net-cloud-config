@@ -14,9 +14,9 @@ security:
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://192.168.99.100:3306/dev
+    url: jdbc:mysql://localhost:3306/pharma-net
     username: root
-    password: dbpass
+    password: root
     initialize: false
 security:
   oauth2:
@@ -25,20 +25,6 @@ security:
     client:
       client-id: acme
       access-token-uri: http://localhost:8787
----
-spring:
-  profiles: docker
-  datasource:
-    url: jdbc:mysql://mysql:3306/dev
-    username: root
-    password: dbpass
-    initialize: true
-security:
-  oauth2:
-    resource:
-      userInfoUri: http://${DOCKER_IP:192.168.99.100}:8181/uaa/user
-    client:
-      client-id: acme
 eureka:
   instance:
     prefer-ip-address: true
