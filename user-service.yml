@@ -24,7 +24,7 @@ spring:
   profiles: development
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/user
+    url: jdbc:mysql://localhost:3306/pharma-net
     username: root
     password: root
     initialize: true
